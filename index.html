@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLACK CLIENT – launcher Minecraft Java Edition oparty na Fabric</title>
+<meta name="description" content="BLACK CLIENT to nowoczesny launcher Minecraft Java Edition oparty na Fabric. Mody, wersje gry, pamięć RAM i logowanie Microsoft w jednym miejscu.">
+<meta name="theme-color" content="#080E0B">
+<meta property="og:title" content="BLACK CLIENT – Twój Minecraft. Twoje zasady.">
+<meta property="og:image" content="assets/banner.png">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3-9 5 9 5 9-5z"/><path d="m3 13 9 5 9-5"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></symbol>
+<symbol id="i-hist" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5M12 8v4l3 2"/></symbol>
+<symbol id="i-hud" viewBox="0 0 24 24"><path d="M3 5h18v12H3zM8 21h8M12 17v4M7 10h4M7 13h7"/></symbol>
+<symbol id="i-ram" viewBox="0 0 24 24"><path d="M6 6h12v12H6zM9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0M12 13a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></symbol>
+<symbol id="i-off" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 4-2.6M22 8.8A15 15 0 0 0 12 5M5 12.9a10 10 0 0 1 5-2.7M19 12.9a10 10 0 0 0-3-2.2M8.5 16.4a5 5 0 0 1 7 0M12 20h.01M3 3l18 18"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="m21 8-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM21 21l-4.3-4.3"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 21h16"/></symbol>
+<symbol id="i-win" viewBox="0 0 24 24"><path d="M3 5.5 10.5 4.5v6.7H3zM11.5 4.4 21 3v8.2h-9.5zM3 12.2h7.5v6.7L3 17.8zM11.5 12.2H21V21l-9.5-1.4z"/></symbol>
+</defs></svg>
+
+<div class="bg"></div><canvas id="stars"></canvas><div class="cursor" id="cursor"></div>
+
+<header class="nav" id="nav"><div class="wrap nav-in">
+  <a href="#home" class="brand" aria-label="BLACK CLIENT – strona główna"><img src="assets/logo.png" alt="BLACK CLIENT" height="34"></a>
+  <nav class="links" id="links" aria-label="Menu główne">
+    <a href="#home">Strona główna</a><a href="#funkcje">Funkcje</a><a href="#mody">Biblioteka modów</a><a href="#wersje">Wersje gry</a><a href="#aktualizacje">Aktualizacje</a><a href="#pobierz">Pobieranie</a>
+    <a href="#" class="discord" data-link="discord" rel="noopener">Discord</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+</div></header>
+
+<main>
+<section id="home" class="hero"><div class="wrap hero-g">
+  <div class="hero-copy">
+    <h1>BLACK CLIENT</h1>
+    <p class="tag">Twój Minecraft. Twoje zasady.</p>
+    <p class="lead">Nowoczesny launcher Minecraft Java Edition oparty na Fabric. Zarządzaj wersjami gry, modami i pamięcią RAM w jednym szybkim, przejrzystym interfejsie.</p>
+    <div class="cta">
+      <a class="btn p lg" href="#pobierz" data-link="download" data-soft><svg class="i"><use href="#i-dl"/></svg>Pobierz dla Windows</a>
+      <a class="btn g lg" href="#funkcje">Poznaj funkcje</a>
+    </div>
+  </div>
+  <figure class="frame"><img src="assets/launcher.png" alt="Okno launchera BLACK CLIENT" width="1280" height="800"></figure>
+</div></section>
+
+<section id="funkcje"><div class="wrap">
+  <div class="sec-h rv"><h2>Wszystko, czego potrzebuje Twój Minecraft</h2><p>Dziewięć rzeczy, które launcher robi za Ciebie, żebyś mógł po prostu grać.</p></div>
+  <div class="bento">
+    <article class="card b-xl rv"><span class="ico"><svg class="i"><use href="#i-bolt"/></svg></span><div><h3>Optymalizacja wydajności</h3><p>Launcher zbudowany wokół płynności gry. Wydajność jest tu priorytetem, a nie dodatkiem.</p></div></article>
+    <article class="card rv"><span class="ico"><svg class="i"><use href="#i-layers"/></svg></span><div><h3>Obsługa Fabric</h3><p>Uruchamiaj grę z lekkim loaderem Fabric.</p></div></article>
+    <article class="card rv"><span class="ico"><svg class="i"><use href="#i-grid"/></svg></span><div><h3>Biblioteka modów</h3><p>Przeglądaj mody w jednym miejscu.</p></div></article>
+    <article class="card b-w rv"><span class="ico"><svg class="i"><use href="#i-hist"/></svg></span><div><h3>Zarządzanie wersjami Minecraft</h3><p>Instaluj i przełączaj wersje gry bezpośrednio z launchera.</p></div></article>
+    <article class="card rv"><span class="ico"><svg class="i"><use href="#i-hud"/></svg></span><div><h3>Black Client HUD</h3><p>Własny HUD Black Client w trakcie gry.</p></div></article>
+    <article class="card rv"><span class="ico"><svg class="i"><use href="#i-ram"/></svg></span><div><h3>Regulacja pamięci RAM</h3><p>Ustaw, ile pamięci ma dostać gra.</p></div></article>
+    <article class="card rv"><span class="ico"><svg class="i"><use href="#i-user"/></svg></span><div><h3>Logowanie Microsoft</h3><p>Zaloguj się kontem powiązanym z Minecraftem.</p></div></article>
+    <article class="card rv"><span class="ico"><svg class="i"><use href="#i-off"/></svg></span><div><h3>Tryb offline</h3><p>Uruchom grę bez logowania.</p></div></article>
+    <article class="card b-f rv"><span class="ico"><svg class="i"><use href="#i-box"/></svg></span><div><h3>Wbudowany zestaw modów optymalizacyjnych</h3><p>Launcher zawiera gotowy zestaw modów poprawiających wydajność, więc możesz zacząć grać od razu.</p></div></article>
+  </div>
+</div></section>
+
+<section id="mody"><div class="wrap">
+  <div class="sec-h rv"><h2>Biblioteka modów</h2><p>Wyszukaj mod po nazwie lub opisie i zawęź listę kategorią. Kliknij kartę, aby zobaczyć więcej.</p></div>
+  <div class="tools rv">
+    <label class="search"><svg class="i"><use href="#i-search"/></svg><input id="q" type="search" placeholder="Szukaj modów…" autocomplete="off" aria-label="Szukaj modów"></label>
+    <div class="chips" id="cats" role="group" aria-label="Kategorie modów"></div>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="mods" id="mods"></div>
+</div></section>
+
+<section id="wersje"><div class="wrap split">
+  <div class="rv"><h2>Wersje gry</h2><p class="muted">Wybierz wersję Minecrafta, zainstaluj ją i uruchom z Fabric. Przełączanie między wersjami odbywa się w launcherze, bez ręcznego kopiowania plików.</p></div>
+  <div class="card rv"><div class="chips big" id="vers"></div></div>
+</div></section>
+
+<section id="aktualizacje"><div class="wrap">
+  <div class="sec-h rv"><h2>Aktualizacje</h2><p>Historia zmian launchera, od najnowszej wersji.</p></div>
+  <div class="log rv" id="log"></div>
+</div></section>
+
+<section id="pobierz"><div class="wrap">
+  <div class="card dl rv">
+    <span class="ico lg"><svg class="i fill"><use href="#i-win"/></svg></span>
+    <h2>Pobierz Black Client dla Windows</h2>
+    <p class="muted">Zainstaluj launcher, zaloguj się kontem Microsoft lub włącz tryb offline i zacznij grać.</p>
+    <a class="btn p lg" href="#pobierz" data-link="download"><svg class="i"><use href="#i-dl"/></svg>Pobierz dla Windows</a>
+    <small id="ver" class="muted" hidden></small>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap narrow">
+  <div class="sec-h rv"><h2>Najczęstsze pytania</h2></div>
+  <div class="faq rv" id="faqList">
+    <div class="q"><button aria-expanded="false">Czym jest Black Client?<svg class="i"><use href="#i-chev"/></svg></button><div class="a"><p>Black Client to launcher do Minecraft Java Edition oparty na Fabric. Pozwala zarządzać wersjami gry, modami i ustawieniami uruchamiania w jednym miejscu.</p></div></div>
+    <div class="q"><button aria-expanded="false">Czy mogę zalogować się kontem Microsoft?<svg class="i"><use href="#i-chev"/></svg></button><div class="a"><p>Tak, launcher obsługuje logowanie kontem Microsoft. Dostępny jest także tryb offline.</p></div></div>
+    <div class="q"><button aria-expanded="false">Czy mogę zmienić ilość pamięci RAM?<svg class="i"><use href="#i-chev"/></svg></button><div class="a"><p>Tak, launcher pozwala ustawić, ile pamięci RAM ma otrzymać gra.</p></div></div>
+    <div class="q"><button aria-expanded="false">Na jakich systemach działa launcher?<svg class="i"><use href="#i-chev"/></svg></button><div class="a"><p>Aktualnie dostępna jest wersja dla systemu Windows.</p></div></div>
+    <div class="q"><button aria-expanded="false">Czy Black Client jest produktem Mojang lub Microsoft?<svg class="i"><use href="#i-chev"/></svg></button><div class="a"><p>Nie. Black Client nie jest oficjalnym produktem Mojang Studios ani Microsoft.</p></div></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <div><img src="assets/logo.png" alt="BLACK CLIENT" height="30"><p class="muted">Twój Minecraft. Twoje zasady.</p></div>
+  <nav aria-label="Stopka"><a href="#funkcje">Funkcje</a><a href="#mody">Biblioteka modów</a><a href="#wersje">Wersje gry</a><a href="#aktualizacje">Aktualizacje</a><a href="#pobierz">Pobieranie</a><a href="#" data-link="discord">Discord</a></nav>
+  <p class="legal muted">© <span id="yr"></span> BLACK CLIENT. Minecraft jest znakiem towarowym Mojang Studios. Black Client nie jest oficjalnym produktem Mojang Studios ani Microsoft.</p>
+</div></footer>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
